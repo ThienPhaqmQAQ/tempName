@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/menu.css" rel="stylesheet">
+    <title>lab 6_ex1</title>
+</head>
+<body>
+    
+
+<body>
+    <h1> Ex 1 </h1>
+
+    <div class="tab">
+    
+        <button class="tablinks" onclick="openCity(event, 'Design')">Design</button>
+        <button class="tablinks" onclick="openCity(event, 'Implement')">Implement</button>
+      </div>
+      
+      <div id="Design" class="tabcontent">
+        <h3>Design</h3>
+        <img style="width: 300px; height: 200px;" src="images/aex1.jpg" alt="">
+        <a href="https://www.figma.com/file/qRpBSM94oU9xHF0dwYZmLS/Untitled?type=design&node-id=115-19&mode=design&t=hMcAHlMA4A5mrvwt-0">Figma</a>
+      </div>
+      
+      <div id="Implement" class="tabcontent">
+        <h3>Implement.</h3> <br>
+        <a href="ex1.html">Ex 1</a> <br> <br>
+      </div>
+
+ <script>
+    function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+ </script>     
+
+</body>
+</body>
+</html>

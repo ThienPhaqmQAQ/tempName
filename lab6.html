@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/menu.css" rel="stylesheet">
+    <title>lab 6</title>
+</head>
+<body>
+    
+
+<body>
+    <h1> Lab 6 </h1>
+
+    <div class="tab">
+    
+        <button class="tablinks" onclick="openCity(event, 'Design')">Lab6 ex1</button>
+        <button class="tablinks" onclick="openCity(event, 'Implement')">Lab6 ex2</button>
+      </div>
+      
+      <div id="Design" class="tabcontent">
+        <h3>Ex1</h3>
+        <a href="lab6_ex1.html">ex1</a>
+       
+      </div>
+      
+      <div id="Implement" class="tabcontent">
+        <h3>Ex2</h3> <br>
+        <a href="lab6_ex2.html">Ex 2</a> <br> <br>
+      </div>
+
+ <script>
+    function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+ </script>     
+
+</body>
+</body>
+</html>
